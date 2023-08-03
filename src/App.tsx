@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './page/Home';
 import About from './page/About';
 import Navbar from './components/Navbar';
-
+import Commingsoon from './components/Commingsoon'
 function App() {
   return (
     <Router>
@@ -25,6 +25,11 @@ function App() {
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Commingsoon />} />
+          <Route path="/register" element={<Commingsoon />} />
+          <Route path="/" element={<Commingsoon />} />
+          <Route path="/login" element={<Commingsoon />} />
+          <Route path="/login" element={<Commingsoon />} />
         </Routes>
       </div>
     </Router>
