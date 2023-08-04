@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex items-center justify-between px-4 py-2 bg-gray-900 text-white">
+      <nav className="nav-header flex items-center justify-between px-4 py-2 bg-gray-900 text-white">
         {/* Logo */}
         <div className="flex items-center">
            <FaUser className="text-2xl mr-2" /> 
@@ -43,6 +43,9 @@ const Navbar = () => {
 
         {/* Menu chính */}
         <ul className="hidden md:flex space-x-4">
+        <li>
+            <Link to="/library" className="text-white hover:text-gray-300 transition">Library</Link>
+          </li> 
           <li>
             <Link to="/Login" className="text-white hover:text-gray-300 transition">Đăng nhập</Link>
           </li>

@@ -1,0 +1,47 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltipText {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &::after {
+        content: "";
+        position: absolute;
+        border-width: 5px;
+        border-style: solid;
+    }
+}
+
+.tooltip:hover .tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltipText.top {
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    &::after {
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-color: #555 transparent transparent transparent;
+    }
+}
+
+// define other positions (right, bottom, left) in a similar way
