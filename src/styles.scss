@@ -1,5 +1,50 @@
-// $primary-color: blue;
+// rule 
+// Khai báo các biến màu
+$color-primary: #ebe7e7; // màu xanh dương
+$color-secondary: #FFA500; // màu cam
+$color-white: hsl(0, 0%, 100%); // màu trắng
+$color-gray: #A9A9A9; // màu xám
+$color-black: #000000; // màu đen
 
-// body {
-//   background-color: $primary-color;
-// }
+// Khai báo các biến font
+$font-primary: 'Roboto', sans-serif;
+$font-secondary: 'Arial', sans-serif;
+
+// Sử dụng biến màu và font đã khai báo
+body {
+    background-color: $color-primary;
+}
+ 
+
+.nav-header {
+    background-color: $color-gray;
+    height: 80px;
+    color: $font-primary;
+    color: $color-primary;
+}
+
+// Sử dụng màu sắc khác cho các thành phần khác nhau của trang web
+.header {
+    background-color: $color-black;
+    color: $color-white;
+}
+
+.footer {
+    background-color: $color-secondary;
+    color: $color-black;
+}
+.nav-header{
+    background: rgb(59, 59, 59);
+    height: 80px;
+}
+
+.wrap-page{
+    padding: 10px;
+    margin: 5px;
+    background: #e4e4e4;
+    border-radius: 50px;
+    min-height: 60vh;
+}
+
+
+    

@@ -1,0 +1,42 @@
+// Button.module.scss
+
+$color-primary: #252525;
+$color-secondary: #f5cb77;
+$color-hover: lighten($color-primary, 10%);
+$padding-large: 10px 20px;
+$padding-small: 5px 10px;
+
+.button {
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+
+    &.large {
+        padding: $padding-large;
+    }
+
+    &.small {
+        padding: $padding-small;
+    }
+
+    &.primary {
+        background-color: $color-primary;
+        color: white;
+
+        &:hover {
+            background-color: $color-hover;
+        }
+    }
+
+    &.secondary {
+        background-color: $color-secondary;
+        color: white;
+
+        &:hover {
+            background-color: lighten($color-secondary, 10%);
+        }
+    }
+}
