@@ -18,4 +18,4 @@ frontend:
     - pattern: '**/*.js'
       headers:
         - key: 'Content-Type'
-        value: 'application/javascript; charset=UTF-8'
+          value: 'application/javascript; charset=UTF-8'
