@@ -1,13 +1,14 @@
 
 import { BrowserRouter as Router, Routes, Route,   } from 'react-router-dom';
 import Home from './page/Home';
-import About from './page/About';
+import About from '../src/page/Layout/About';
 import Navbar from './components/Navbar';
 import Commingsoon from './components/Commingsoon'
-import ButtonLibrary from './page/ButtonLibrary';
-import Library from './page/Library';
-import TooltipLibrary from './page/TooltipLibrary';
+import ButtonLibrary from './page/Library/ButtonLibrary';
+import Library from './page/Library/Library';
+import TooltipLibrary from './page/Library/TooltipLibrary';
 import Button from './components/Button';
+import ColorPicker from './page/Library/ColorPicker';
 function App() {
   
   const handleBack = () => {
@@ -45,6 +46,7 @@ const handleNext = () => {
           <Route path="/library" element={<Library />} />
           <Route path="/library/button" element={<ButtonLibrary />} />
           <Route path="/library/tooltip" element={<TooltipLibrary />} />
+          <Route path="/library/colorpicker" element={<ColorPicker />} />
 
           <Route path="/login" element={<Commingsoon />} />
         </Routes>
