@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { FaBars, FaUser, FaShoppingCart,FaTimes, FaSignInAlt, FaUserPlus, FaInfoCircle, FaHome } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 const Navbar = () => {
