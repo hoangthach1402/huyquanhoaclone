@@ -33,8 +33,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div>
-      <nav className="nav-header flex items-center justify-between px-4 py-2 bg-gray-900 text-white">
+    <div className='navbar'>
+      <div className=" nav-header flex items-center justify-between px-4 py-2 bg-gray-900 text-white">
         {/* Logo */}
         <div className="flex items-center">
            <FaUser className="text-2xl mr-2" /> 
@@ -44,13 +44,13 @@ const Navbar = () => {
         {/* Menu chính */}
         <ul className="hidden md:flex space-x-4">
         <li>
-            <Link to="/library" className="text-white hover:text-gray-300 transition">Library</Link>
+            <Link to="/library" className=" text-white hover:text-gray-300 transition uppercase">Library</Link>
           </li> 
           <li>
-            <Link to="/Login" className="text-white hover:text-gray-300 transition">Đăng nhập</Link>
+            <Link to="/Login" className="text-white hover:text-gray-300 transition uppercase">Đăng nhập</Link>
           </li>
           <li>
-            <Link to="#" className="text-white hover:text-gray-300 transition">Đăng ký</Link>
+            <Link to="#" className="text-white hover:text-gray-300 transition uppercase">Đăng ký</Link>
           </li>
           <li>
             <Link to="#" className="text-white hover:text-gray-300 transition">
@@ -69,33 +69,33 @@ const Navbar = () => {
             {isMenuOpen ? <FaTimes className="pointer-events-none"/> : <FaBars className="pointer-events-none"/>}
           </button>
         </div>
-      </nav>
+      </div>
       {isMenuOpen && (
        <ul
        ref={menuRef}
        className="mt-2 bg-white border rounded-lg w-48 absolute top-12 right-4 shadow-md"
      >
        <li className="py-2">
-         <Link to="/login" className="flex items-center px-4 text-black hover:text-gray-500 transition">
-           <FaSignInAlt className="mr-2" />
+         <Link to="/login" className="flex items-center px-4 text-black hover:text-gray-500 transition uppercase">
+           <FaSignInAlt className="mr-2 uppercase" />
            Login
          </Link>
        </li>
        <li className="py-2">
-         <Link to="#" className="flex items-center px-4 text-black hover:text-gray-500 transition">
-           <FaUserPlus className="mr-2" />
+         <Link to="#" className="flex items-center px-4 text-black hover:text-gray-500 transition uppercase">
+           <FaUserPlus className="mr-2 " />
            Register
          </Link>
        </li>
        <li className="py-2">
-         <Link to="#" className="flex items-center px-4 text-black hover:text-gray-500 transition">
-           <FaInfoCircle className="mr-2" />
+         <Link to="#" className=" flex items-center px-4 text-black hover:text-gray-500 transition uppercase">
+           <FaInfoCircle className="mr-2 " />
            About
          </Link>
        </li>
        <li className="py-2">
-         <Link to="#" className="flex items-center px-4 text-black hover:text-gray-500 transition">
-           <FaHome className="mr-2" />
+         <Link to="#" className="flex items-center px-4 text-black hover:text-gray-500 transition uppercase">
+           <FaHome className="mr-2  " />
            Home
          </Link>
        </li>

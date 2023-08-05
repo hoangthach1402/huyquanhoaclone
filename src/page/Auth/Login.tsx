@@ -1,37 +1,35 @@
-// import React from 'react';
-// import styles from './Button.module.scss';
+import { useEffect } from 'react';
+//  const useEffect
+const Login = () => {
+  useEffect(() => {
+    document.body.classList.add('hide-navbar');
 
-// class AuthForm extends React.Component {
-//   // State, Methods...
+    return () => {
+      document.body.classList.remove('hide-navbar');
+    };
+  }, []);
+  
+  return (
+    <div className="wrapper">
+        <div className="form-title">
+            <h1 className="text-3xl font-bold">Login</h1>
+            <form className="form" action="">
+                <div className="form-group">
+                    <label htmlFor="email">Email</label>
+                    <input className="form-control" type="text" name="email" id="email" placeholder="Enter your email" />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input className="form-control" type="password" name="password" id="password" placeholder="Enter your password" />
+                </div>
+                <div className="form-group">
+                    <button className="btn btn-primary" type="submit">Login</button>
+                </div>
 
-//   render() {
-//     const { isLoginMode } = this.state;
-//     const buttonClasses = isLoginMode ? styles.primary : styles.secondary;
+            </form>
+        </div>
+    </div>
+  )
+}
 
-//     return (
-//       <div className={styles.auth-container}>
-//         <form onSubmit={this.handleSubmit}>
-//           <h2>{isLoginMode ? 'Login' : 'Register'}</h2>
-//           <input
-//             type="text"
-//             name="username"
-//             placeholder="Username"
-//             onChange={this.handleInputChange}
-//             required
-//           />
-//           <input
-//             type="password"
-//             name="password"
-//             placeholder="Password"
-//             onChange={this.handleInputChange}
-//             required
-//           />
-//           <input className={`${styles.button} ${buttonClasses}`} type="submit" value={isLoginMode ? 'Login' : 'Register'} />
-//         </form>
-//         <button onClick={this.toggleMode}>{isLoginMode ? 'Switch to Register' : 'Switch to Login'}</button>
-//       </div>
-//     );
-//   }
-// }
-
-// export default AuthForm;
+export default Login
