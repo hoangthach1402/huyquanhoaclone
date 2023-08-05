@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent } from 'react';
 
 const ColorPicker = () => {
   const [rgb, setRGB] = useState({ r: 255, g: 255, b: 255 });
 
-  const handleChange = (event) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setRGB({ ...rgb, [name]: value });
+    setRGB({ ...rgb, [name]: parseInt(value) });
   };
 
   const bgColor = `rgb(${rgb.r}, ${rgb.g}, ${rgb.b})`;
