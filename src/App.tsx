@@ -8,6 +8,7 @@ import ButtonLibrary from './page/ButtonLibrary';
 import Library from './page/Library';
 import TooltipLibrary from './page/TooltipLibrary';
 import Button from './components/Button';
+import Test from './page/Test';
 function App() {
   
   const handleBack = () => {
@@ -37,6 +38,7 @@ const handleNext = () => {
 
           <Routes>
           <Route path="/about" element={<About />} />
+          <Route path="/test" element={<Test />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Commingsoon />} />
           <Route path="/register" element={<Commingsoon />} />
