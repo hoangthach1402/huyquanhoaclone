@@ -1,14 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link,useHistory  } from 'react-router-dom';
+
+import { BrowserRouter as Router, Routes, Route,   } from 'react-router-dom';
 import Home from './page/Home';
-import About from './page/About';
+import About from '../src/page/Layout/About';
 import Navbar from './components/Navbar';
 import Commingsoon from './components/Commingsoon'
-import ButtonLibrary from './page/ButtonLibrary';
-import Library from './page/Library';
-import TooltipLibrary from './page/TooltipLibrary';
+import ButtonLibrary from './page/Library/ButtonLibrary';
+import Library from './page/Library/Library';
+import TooltipLibrary from './page/Library/TooltipLibrary';
 import Button from './components/Button';
-import Test from './page/Test';
+import ColorPicker from './page/Library/ColorPicker';
+import Login from './page/Auth/Login';
 function App() {
   
   const handleBack = () => {
@@ -20,38 +21,24 @@ const handleNext = () => {
   return (
     <Router>
       <div className='wrapper'>
-        {/* Thêm component Navbar vào đây */}
-        <Navbar />
-
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/">Trang chủ</Link>
-            </li>
-            <li>
-              <Link to="/about">Về chúng tôi</Link>
-            </li>
-          </ul>
-        </nav> */}
-
+          <Navbar />
         <div className='wrap-page'>
 
           <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/test" element={<Test />} />
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Commingsoon />} />
+          {/* <Route path="/login" element={<Commingsoon />} /> */}
           <Route path="/register" element={<Commingsoon />} />
           <Route path="/" element={<Commingsoon />} />
           {/* library */}
           <Route path="/library" element={<Library />} />
           <Route path="/library/button" element={<ButtonLibrary />} />
           <Route path="/library/tooltip" element={<TooltipLibrary />} />
-
-          <Route path="/login" element={<Commingsoon />} />
+          <Route path="/library/colorpicker" element={<ColorPicker />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <div>
-       
         </div>
         </div>
         <div className='mt-5 flex justify-center'>
@@ -64,7 +51,14 @@ const handleNext = () => {
         </div>
       </div>
     </Router>
-  );
-}
+          
+          );
+        }
+        
+      
+      
+     
+   
+       
 
 export default App;
